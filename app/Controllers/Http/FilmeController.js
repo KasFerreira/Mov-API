@@ -21,13 +21,13 @@ class FilmeController {
    */
   async index ({ request, response, view }) {
     
-    const page = request.input('page', 1)
-    const limit = 3
-
+    const {page, perPage} = request.get('page', 'perPage')
+    // const limit = 3
+    console.log(perPage)
     
 
 
-    const filmes = await Filme.query().paginate(page, limit)
+    const filmes = await Filme.query().paginate(page, perPage)
      
 
 
