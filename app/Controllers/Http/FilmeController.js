@@ -20,6 +20,20 @@ class FilmeController {
    * @param {View} ctx.view
    */
   async index ({ request, response, view }) {
+    
+    const page = request.input('page', 1)
+    const limit = 3
+
+    
+
+
+    const filmes = await Filme.query().paginate(page, limit)
+     
+
+
+    response.json({
+      filme:filmes
+    }) 
   }
 
   /**
@@ -67,6 +81,11 @@ class FilmeController {
    * @param {View} ctx.view
    */
   async show ({ params, request, response, view }) {
+
+
+
+
+
   }
 
   /**

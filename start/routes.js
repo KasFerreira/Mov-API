@@ -17,3 +17,5 @@
 const Route = use('Route')
 
 Route.get('/','FilmeController.store')
+Route.get('/show','FilmeController.index')
+
