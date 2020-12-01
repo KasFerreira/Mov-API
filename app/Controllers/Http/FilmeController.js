@@ -42,11 +42,13 @@ class FilmeController {
    * @param {Response} ctx.response
    */
   async store ({ request, response }) {
-    const {name, genero} = request.post()
+    const {name, genero, releaseDate, description} = request.post()
     
     const filme = new Filme()
     filme.name = name
     filme.genero = genero
+    filme.releaseDate=releaseDate
+    filme.description=description
 
     await filme.save()
     response.json({
