@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Adonis API application
 
 This is the boilerplate for creating an API server in AdonisJs, it comes pre-configured with.
@@ -26,3 +27,6 @@ Run the following command to run startup migrations.
 ```js
 adonis migration:run
 ```
+=======
+# Mov-API
+>>>>>>> cda6a28c7df3bff41f18fd0680cd45b7c4ba2559
