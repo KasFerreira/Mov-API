@@ -16,6 +16,12 @@
 /** @type {typeof import('@adonisjs/framework/src/Route/Manager')} */
 const Route = use('Route')
 
-Route.get('/','FilmeController.store')
-Route.get('/show','FilmeController.index')
+// Route.post('/create','FilmeController.store')
+// Route.get('/show','FilmeController.index')
+// Route.post('/delete','FilmeController.destroy')
 
+
+Route.group(()=>{
+    Route.resource("filmes","FilmeController").apiOnly
+
+})
